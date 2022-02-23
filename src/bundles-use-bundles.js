@@ -1,6 +1,10 @@
-import { useState, useEffect } from 'https://unpkg.com/htm/preact/standalone.module.js';
+import { useEffect, useState } from 'https://unpkg.com/htm/preact/standalone.module.js';
 
-const ALL_BUNDLES = 'https://bundle.revy.io/api/embed?shop=miss-learning-bee.myshopify.com&currency_rate=1.0&currency_symbol=AUD&uuids[]=all';
+const SHOP = 'your-shop.myshopify.com';
+const CURRENCY_RATE = '1.0';
+const CURRENCY_SYMBOL = 'AUD';
+
+const REVY_API = `https://bundle.revy.io/api/embed?shop=${SHOP}&currency_rate=${CURRENCY_RATE}&currency_symbol=${CURRENCY_SYMBOL}&uuids[]=all`;
 
 const useBundles = () => {
   const [bundles, setBundles] = useState([])
@@ -8,7 +12,7 @@ const useBundles = () => {
   const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
-    fetch(ALL_BUNDLES)
+    fetch(REVY_API)
       .then(res => {
         res.json()
           .then(data => {

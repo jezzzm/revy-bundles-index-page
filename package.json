@@ -5,9 +5,8 @@
   "type": "module",
   "source": "src/bundles-app.js",
   "exports": "./dist/custom-bundles.modern.js",
-  "module": "./dist/custom-bundles.module.js",
   "scripts": {
-    "build": "microbundle -f modern",
+    "build": "microbundle -f modern"
   },
   "author": "jez",
   "license": "ISC",
