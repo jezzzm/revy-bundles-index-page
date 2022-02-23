@@ -8,7 +8,6 @@
   "module": "./dist/custom-bundles.module.js",
   "scripts": {
     "build": "microbundle -f modern",
-    "dev": "microbundle watch"
   },
   "author": "jez",
   "license": "ISC",
